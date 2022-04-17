@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Header from "./components/Header";
 import About from "./routes/About";
+import Project from "./routes/Project";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { blueTheme, lightTheme } from "./theme/theme";
-import { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { isBlueAtom } from "./atoms";
 
@@ -16,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
 @font-face {
-    font-family: 'DOSGothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+    font-family: 'BinggraeMelona-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'GangwonEdu_OTFBoldA';
     line-height: 1.2;
+    font-size: 21px;
+    cursor:url(https://img.icons8.com/ios-glyphs/30/000000/search--v1.png) 13 13,auto;
   }
   ol, ul, li {
     list-style: none;
@@ -36,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+    cursor:url(https://img.icons8.com/small/32/000000/exclamation-mark.png) 13 13,auto;
   }
   button {
       cursor: pointer;
@@ -44,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const isBlue = useRecoilValue(isBlueAtom);
+
   return (
     <>
       <BrowserRouter>
@@ -53,6 +57,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
+            <Route path="/project" element={<Project />}></Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

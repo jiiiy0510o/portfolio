@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { isBlueAtom } from "../atoms";
-import { FaCloud } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+
+import { AiFillGithub } from "react-icons/ai";
+import { BiBookAlt } from "react-icons/bi";
 
 const Items = styled.ul`
+  z-index: 99;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -13,25 +16,44 @@ const Items = styled.ul`
   padding: 0 40px;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.accentColor};
+  position: fixed;
+  top: 0;
 `;
 const Item = styled.li`
-  display: block;
   position: relative;
-  font-size: 20px;
   padding: 0 20px;
 `;
-const Dot = styled.span`
-  position: absolute;
-  left: 50%;
-  top: 23px;
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: ${(props) => props.theme.accentColor};
-`;
 const Button = styled.button`
+  border: 3px double ${(props) => props.theme.accentColor};
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 8px;
   background-color: transparent;
-  border: none;
+  &:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
+`;
+const Contact = styled.span`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 26px;
+`;
+const A = styled.a`
+  display: flex;
+  justify-content: center;
+  &:hover {
+    color: #036df3;
+  }
+`;
+const LineBox = styled.div`
+  margin-right: 20px;
+  width: 6vw;
+  height: 1px;
+  background-color: ${(props) => props.theme.accentColor};
 `;
 
 function Header() {
@@ -42,32 +64,32 @@ function Header() {
   return (
     <Items>
       <Item>
-        <Link to="/">
+        <NavLink to="/" exact={true} style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           Home
-          <Dot />
-        </Link>
+        </NavLink>
       </Item>
       <Item>
-        <Link to="/about">
+        <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           About
-          <Dot />
-        </Link>
+        </NavLink>
       </Item>
       <Item>
-        <Link to="/project">
+        <NavLink to="/project" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           Project
-          <Dot />
-        </Link>
+        </NavLink>
       </Item>
       <Item>
-        <Link to="/link">
-          Line
-          <Dot />
-        </Link>
+        <Contact>
+          <LineBox></LineBox>
+          <A href="https://jiiiy0510o.tistory.com/" target="_blank" rel="noreferrer">
+            <BiBookAlt style={{ marginRight: "20px" }} />
+          </A>
+          <A href="https://github.com/jiiiy0510o" target="_blank" rel="noreferrer">
+            <AiFillGithub />
+          </A>
+        </Contact>
       </Item>
-      <Button onClick={toggleBlueAtom}>
-        <FaCloud />
-      </Button>
+      <Button onClick={toggleBlueAtom} />
     </Items>
   );
 }
