@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useSetRecoilState } from "recoil";
 import { isBlueAtom } from "../atoms";
 import { NavLink } from "react-router-dom";
-
 import { AiFillGithub } from "react-icons/ai";
 import { BiBookAlt } from "react-icons/bi";
 
@@ -18,10 +17,19 @@ const Items = styled.ul`
   color: ${(props) => props.theme.accentColor};
   position: fixed;
   top: 0;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 const Item = styled.li`
   position: relative;
   padding: 0 20px;
+  @media screen and (max-width: 500px) {
+    right: -6%;
+    width: 100%;
+    padding: 0 12px;
+  }
 `;
 const Button = styled.button`
   border: 3px double ${(props) => props.theme.accentColor};
@@ -34,6 +42,10 @@ const Button = styled.button`
   &:hover {
     transform: scale(1.2);
     transition: 0.2s;
+  }
+  @media screen and (max-width: 500px) {
+    display: block;
+    margin-left: 26px;
   }
 `;
 const Contact = styled.span`
