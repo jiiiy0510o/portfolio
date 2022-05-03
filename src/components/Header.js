@@ -17,17 +17,15 @@ const Items = styled.ul`
   color: ${(props) => props.theme.accentColor};
   position: fixed;
   top: 0;
-
-  @media screen and (max-width: 500px) {
-    width: 100%;
-  }
 `;
 const Item = styled.li`
   position: relative;
   padding: 0 20px;
+  @media screen and (max-width: 800px) {
+    padding: 0 16px;
+  }
   @media screen and (max-width: 500px) {
     right: -6%;
-    width: 100%;
     padding: 0 12px;
   }
 `;

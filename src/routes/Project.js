@@ -8,7 +8,10 @@ import Port from "../images/port.jpg";
 const Wrapper = styled.div`
   position: relative;
   top: 7vh;
+  width: 100vw;
   height: 93vh;
+  padding: 20px;
+  margin: 0 auto;
   background: ${(props) => props.theme.bgColor};
   display: flex;
   justify-content: center;
@@ -16,19 +19,22 @@ const Wrapper = styled.div`
 `;
 const SideAbout = styled.aside`
   top: 7vh;
-  width: 30vw;
+  width: 32vw;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1300px) {
+    width: 26vw;
+  }
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
 const MainBox = styled.div`
-  width: 60vw;
+  width: 68vw;
   height: 72vh;
-  padding: 20px;
   background-color: #ffffff;
   border: 3px solid #036df3;
   overflow-y: auto;
@@ -39,8 +45,13 @@ const MainBox = styled.div`
   }
   &::-webkit-scrollbar-thumb {
     width: 12px;
-    background-color: #79a7d0;
+    background-color: ${(props) => props.theme.accentColor};
     border-radius: 6px;
+    border: 1px solid #333;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 94vw;
+    height: 78vh;
   }
   @media screen and (max-width: 500px) {
     width: 92vw;
@@ -55,25 +66,53 @@ const ProjectTitle = styled.div`
   color: ${(props) => props.theme.accentColor};
   font-family: "BinggraeMelona-Bold";
   font-size: 5vw;
+  @media screen and (max-width: 1300px) {
+    font-size: 4.5vw;
+  }
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
-
+const ProjectTitleReflect = styled.div`
+  position: absolute;
+  left: 3vw;
+  top: 16vh;
+  opacity: 0.2;
+  height: 6.5vh;
+  color: ${(props) => props.theme.accentColor};
+  font-family: "BinggraeMelona-Bold";
+  font-size: 5vw;
+  transform: rotateX(180deg);
+  @media screen and (max-width: 1800px) {
+    display: none;
+  }
+`;
 const ProjectBox = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   &:last-child {
     border-bottom: none;
   }
   border-bottom: 1px solid #bbb;
   width: 100%;
   @media screen and (max-width: 500px) {
-    padding: 22px 0;
+    padding: 12px 0;
   }
 `;
 const A = styled.a`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  padding: 10px 0;
+  text-align: end;
+  font-size: 1.2rem;
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
+  }
+  &:hover {
+    color: #036df3;
+  }
 `;
 const Img = styled.img`
-  width: 42%;
+  width: 44%;
   height: 56%;
   padding: 16px 0;
   @media screen and (max-width: 500px) {
@@ -82,20 +121,39 @@ const Img = styled.img`
   }
 `;
 const Description = styled.div`
+  width: 46%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   word-break: break-all;
   padding: 0 12px;
 `;
-const Title = styled.h4``;
-
-const Text = styled.p`
-  padding: 6px;
-  font-size: 16px;
+const Title = styled.h3`
+  @media screen and (max-width: 1000px) {
+    padding: 10px 0;
+    margin-top: 6px;
+    font-size: 1.2rem;
+  }
   @media screen and (max-width: 500px) {
     padding: 0;
     margin-top: 6px;
+    font-size: 1.1rem;
+  }
+`;
+
+const Text = styled.p`
+  padding: 12px 0;
+  font-size: 1.2rem;
+  color: #666;
+  @media screen and (max-width: 1000px) {
+    padding: 0;
+    margin-top: 8px;
+    font-size: 1.1rem;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 0;
+    margin-top: 10px;
+    font-size: 1rem;
   }
 `;
 
@@ -104,63 +162,60 @@ function Project() {
     <Wrapper>
       <SideAbout>
         <ProjectTitle>PROJECT</ProjectTitle>
-        <ProjectTitle style={{ top: "16vh", opacity: "0.2", transform: "rotateX(180deg)" }}>PROJECT</ProjectTitle>
+        <ProjectTitleReflect>PROJECT</ProjectTitleReflect>
       </SideAbout>
       <MainBox>
         <ProjectBox>
-          <A href="https://jiiiy0510o.github.io/Absolut/" target="_blank" rel="noreferrer">
-            <Img src={Absolut} alt="thumbnail"></Img>
-            <Description>
-              <Title>앱솔루트</Title>
-              <Text>HTML과 CSS를 이용하여 앱솔루트 홈페이지를 만들었습니다. 반응형 웹사이트입니다. </Text>
-            </Description>
-          </A>
+          <Img src={Absolut} alt="thumbnail"></Img>
+          <Description>
+            <Title>앱솔루트</Title>
+            <Text>HTML과 CSS를 이용하여 앱솔루트 홈페이지를 만들었습니다. 반응형 웹사이트입니다. </Text>
+            <A href="https://jiiiy0510o.github.io/Absolut/" target="_blank" rel="noreferrer">
+              이동하기
+            </A>
+          </Description>
         </ProjectBox>
         <ProjectBox>
-          <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
-            <Img src={KoKoa} alt="thumbnail"></Img>
-            <Description>
-              <Title>카카오톡 클론</Title>
-              <Text>HTML과 CSS를 이용하여 카카오톡을 만들었습니다. </Text>
-            </Description>
-          </A>
+          <Img src={KoKoa} alt="thumbnail"></Img>
+          <Description>
+            <Title>카카오톡 클론</Title>
+            <Text>HTML과 CSS를 이용하여 카카오톡을 만들었습니다. </Text>
+            <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
+              이동하기
+            </A>
+          </Description>
         </ProjectBox>
         <ProjectBox>
-          <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
-            <Img src={Chrome} alt="thumbnail"></Img>
-            <Description>
-              <Title>크롬앱</Title>
-              <Text> javascript로 시계, 위치와 날씨, 투두리스트 그리고 랜덤명언 등을 만들었습니다. </Text>
-            </Description>
-          </A>
+          <Img src={Chrome} alt="thumbnail"></Img>
+          <Description>
+            <Title>크롬앱</Title>
+            <Text>javascript로 시계, 위치와 날씨, 투두리스트 그리고 랜덤명언 등을 만들었습니다. </Text>
+            <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+              이동하기
+            </A>
+          </Description>
         </ProjectBox>
         <ProjectBox>
-          <A href="https://jiiiy0510o.github.io/chrome-2022/">
-            <Img src={Port} alt="thumbnail"></Img>
-            <Description>
-              <Title>크롬앱</Title>
-              <Text> javascript로 시계, 위치와 날씨, 투두리스트 그리고 랜덤명언 등을 만들었습니다. </Text>
-            </Description>
-          </A>
+          <Img src={Port} alt="thumbnail"></Img>
+          <Description>
+            <Title>포트폴리오</Title>
+            <Text>
+              React, Styled-Components, framer-motion, Recoil을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
+            </Text>
+            <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+              이동하기
+            </A>
+          </Description>
         </ProjectBox>
         <ProjectBox>
-          <A href="https://jiiiy0510o.github.io/chrome-2022/">
-            <Img src={Port} alt="thumbnail"></Img>
-            <Description>
-              <Title> 포트폴리오</Title>
-              <Text> React, Styled-Components, framer-motion, Recoil을 이용해 포트폴리오를 만들었습니다. </Text>
-            </Description>
-          </A>
-        </ProjectBox>
-        <ProjectBox>
-          <A href="https://expo.dev/@jiiiy0510o/simpletodo">
-            <Img src={ToDo} alt="thumbnail"></Img>
-            <Description>
-              <Title>리액트 네이티브 ToDo</Title>
-              <Text> Expo Go를 이용하여 ReactNative로 ToDo를 만들었고, 생성, 추가, 삭제, 저장이 가능합니다. </Text>
-              <Text>QR코드로 이동하기</Text>
-            </Description>
-          </A>
+          <Img src={ToDo} alt="thumbnail"></Img>
+          <Description>
+            <Title>리액트 네이티브 ToDo</Title>
+            <Text>Expo Go를 이용하여 ReactNative로 ToDo를 만들었고, 생성, 추가, 삭제, 저장이 가능합니다.</Text>
+            <A href="https://expo.dev/@jiiiy0510o/simpletodo" target="_blank" rel="noreferrer">
+              QR코드로 이동하기
+            </A>
+          </Description>
         </ProjectBox>
       </MainBox>
     </Wrapper>

@@ -14,21 +14,24 @@ const Wrapper = styled.div`
 `;
 const SideAbout = styled.aside`
   top: 7vh;
-  width: 30vw;
+  width: 32vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1300px) {
+    width: 26vw;
+  }
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
 
 const LineBox = styled.div`
   position: relative;
-  width: 56vw;
-  height: 76vh;
+  width: 68vw;
+  height: 84vh;
   padding: 20px 32px;
   border: 1px solid ${(props) => props.theme.accentColor};
   margin: 55px 30px;
@@ -37,10 +40,15 @@ const LineBox = styled.div`
     transition: all 5s;
     border-radius: 58% 52% 36% 60%/ 56% 42% 42% 50%;
   }
-  @media screen and (max-width: 500px) {
-    width: 98vw;
+  @media screen and (max-width: 1000px) {
+    width: 96vw;
+    height: 68vh;
     margin: 0 auto;
-    padding: 16px;
+    padding: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 58vh;
+    padding: 10px;
   }
 `;
 const TwoLineBox = styled.div`
@@ -86,24 +94,49 @@ const AboutMe = styled.div`
   color: ${(props) => props.theme.accentColor};
   font-family: "BinggraeMelona-Bold";
   font-size: 5vw;
+  @media screen and (max-width: 1300px) {
+    font-size: 4vw;
+  }
   @media screen and (max-width: 500px) {
     display: none;
   }
 `;
+const AboutMeReflect = styled.div`
+  position: absolute;
+  left: 3vw;
+  top: 16vh;
+  opacity: 0.2;
+  height: 6.5vh;
+  color: ${(props) => props.theme.accentColor};
+  font-family: "BinggraeMelona-Bold";
+  font-size: 5vw;
+  transform: rotateX(180deg);
+  @media screen and (max-width: 1800px) {
+    display: none;
+  }
+`;
 const Text = styled.p`
-  padding: 60px 120px;
-  font-size: 1.1rem;
+  padding: 30px 120px;
+  font-size: 1.3rem;
   color: ${(props) => props.theme.bgColor};
   line-height: 1.68;
+  @media screen and (max-width: 1200px) {
+    padding: 30 36px;
+    font-size: 1.13rem;
+  }
+  @media screen and (max-width: 660px) {
+    padding: 0 38px;
+    font-size: 1.06rem;
+  }
   @media screen and (max-width: 500px) {
-    padding: 0 46px;
-    font-size: 1.05rem;
+    padding: 0 36px;
+    font-size: 1.02rem;
   }
 `;
 const Img = styled.img`
   width: 140px;
   height: 180px;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 660px) {
     display: none;
   }
 `;
@@ -113,7 +146,7 @@ function About() {
     <Wrapper>
       <SideAbout>
         <AboutMe>ABOUT ME</AboutMe>
-        <AboutMe style={{ top: "16vh", opacity: "0.2", transform: "rotateX(180deg)" }}>ABOUT ME</AboutMe>
+        <AboutMeReflect>ABOUT ME</AboutMeReflect>
       </SideAbout>
       <LineBox>
         <StoryBox>

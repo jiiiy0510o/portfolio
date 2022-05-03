@@ -18,8 +18,13 @@ const ControlBox = styled(motion.div)`
   height: 86vh;
   overflow: hidden;
   bottom: -3%;
+  @media screen and (max-width: 800px) {
+    margin-top: 4vh;
+    width: 96vw;
+  }
   @media screen and (max-width: 500px) {
-    height: 86vh;
+    margin-top: 4vh;
+    width: 98vw;
   }
 `;
 const Big = styled(motion.div)`
@@ -99,6 +104,7 @@ const BorderMedium = styled.div`
 `;
 const Small = styled(motion.div)`
   position: absolute;
+  z-index: 99;
   top: 40%;
   left: 70%;
   width: 150px;
@@ -132,12 +138,19 @@ const Welcome = styled.div`
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: ${(props) => props.theme.accentColor};
   color: transparent;
+  @media screen and (max-width: 800px) {
+    font-size: 15vw;
+  }
   @media screen and (max-width: 500px) {
     font-size: 14vw;
   }
 `;
 const To = styled.span`
   font-size: 5vw;
+  @media screen and (max-width: 800px) {
+    display: block;
+    font-size: 10vw;
+  }
   @media screen and (max-width: 500px) {
     font-size: 10vw;
     display: block;
@@ -151,6 +164,10 @@ const Text = styled.span`
   font-family: "BinggraeMelona-Bold";
   font-size: 6vw;
   color: ${(props) => props.theme.accentColor};
+  @media screen and (max-width: 800px) {
+    text-align: end;
+    font-size: 11vw;
+  }
   @media screen and (max-width: 500px) {
     text-align: end;
     font-size: 13vw;
