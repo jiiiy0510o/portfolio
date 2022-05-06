@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   overflow-x: hidden;
+  overflow-y: hidden;
 `;
 const SideAbout = styled.aside`
   top: 7vh;
@@ -129,8 +130,12 @@ const Text = styled.p`
     font-size: 1.06rem;
   }
   @media screen and (max-width: 500px) {
-    padding: 0 36px;
-    font-size: 1.02rem;
+    padding: 0 40px;
+    font-size: 0.96rem;
+  }
+  @media screen and (max-width: 400px) {
+    padding: 0 50px;
+    font-size: 0.8rem;
   }
 `;
 const Img = styled.img`

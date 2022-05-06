@@ -55,9 +55,9 @@ function App() {
           <GlobalStyle />
           <Header />
           <Routes>
-            <Route path="/portfolio" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/project" element={<Project />}></Route>
+            <Route path="/portfolio/about" element={<About />}></Route>
+            <Route path="/portfolio/project" element={<Project />}></Route>
+            <Route path="/portfolio/" element={<Home />}></Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

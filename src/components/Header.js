@@ -25,8 +25,8 @@ const Item = styled.li`
     padding: 0 16px;
   }
   @media screen and (max-width: 500px) {
-    right: -6%;
-    padding: 0 12px;
+    right: 4%;
+    padding: 0 10px;
   }
 `;
 const Button = styled.button`
@@ -36,14 +36,14 @@ const Button = styled.button`
   border-radius: 10px;
   margin: 0 10px;
   padding: 8px;
-  background-color: transparent;
+  background-color: ${(props) => props.theme.accentColor};
   &:hover {
     transform: scale(1.2);
     transition: 0.2s;
   }
   @media screen and (max-width: 500px) {
-    display: block;
-    margin-left: 26px;
+    margin: 0;
+    padding: 8px;
   }
 `;
 const Contact = styled.span`
@@ -64,6 +64,9 @@ const LineBox = styled.div`
   width: 6vw;
   height: 1px;
   background-color: ${(props) => props.theme.accentColor};
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 function Header() {
@@ -74,17 +77,17 @@ function Header() {
   return (
     <Items>
       <Item>
-        <NavLink to="/" exact={true} style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
+        <NavLink to="/portfolio/" exact={true} style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           Home
         </NavLink>
       </Item>
       <Item>
-        <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
+        <NavLink to="/portfolio/about" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           About
         </NavLink>
       </Item>
       <Item>
-        <NavLink to="/project" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
+        <NavLink to="/portfolio/project" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           Project
         </NavLink>
       </Item>
