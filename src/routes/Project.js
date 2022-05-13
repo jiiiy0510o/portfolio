@@ -4,6 +4,7 @@ import KoKoa from "../images/kokoa.png";
 import Chrome from "../images/chrome.png";
 import ToDo from "../images/todo.jpg";
 import Port from "../images/port.jpg";
+import Paint from "../images/paint.png";
 
 const Wrapper = styled.div`
   position: relative;
@@ -101,7 +102,7 @@ const ProjectBox = styled.div`
   }
 `;
 const A = styled.a`
-  padding: 10px 0;
+  padding: 16px 0;
   text-align: end;
   font-size: 1.2rem;
   @media screen and (max-width: 500px) {
@@ -117,7 +118,6 @@ const Img = styled.img`
   padding: 16px 0;
   @media screen and (max-width: 500px) {
     padding: 0;
-    margin-right: 12px;
   }
 `;
 const Description = styled.div`
@@ -129,6 +129,7 @@ const Description = styled.div`
   padding: 0 12px;
 `;
 const Title = styled.h3`
+  padding: 10px 0;
   @media screen and (max-width: 1000px) {
     padding: 10px 0;
     margin-top: 6px;
@@ -140,20 +141,20 @@ const Title = styled.h3`
     font-size: 1.1rem;
   }
 `;
-
 const Text = styled.p`
   padding: 12px 0;
-  font-size: 1.2rem;
+  font-size: 1.06rem;
   color: #666;
+  line-height: 1.28;
   @media screen and (max-width: 1000px) {
     padding: 0;
     margin-top: 8px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   @media screen and (max-width: 500px) {
     padding: 0;
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 0.96rem;
   }
 `;
 
@@ -169,7 +170,10 @@ function Project() {
           <Img src={Absolut} alt="thumbnail"></Img>
           <Description>
             <Title>앱솔루트</Title>
-            <Text>HTML과 CSS를 이용하여 앱솔루트 홈페이지를 만들었습니다. 반응형 웹사이트입니다. </Text>
+            <Text>
+              HTML, CSS, J-Query를 이용하여 중복되는 기능 부분을 제외하고 앱솔루트 홈페이지를 만들었습니다.
+              <br /> 반응형 웹사이트이고, 메인페이지 2개와 슬라이드, 메뉴탭 등을 구성하였습니다.
+            </Text>
             <A href="https://jiiiy0510o.github.io/Absolut/" target="_blank" rel="noreferrer">
               이동하기
             </A>
@@ -179,7 +183,7 @@ function Project() {
           <Img src={KoKoa} alt="thumbnail"></Img>
           <Description>
             <Title>카카오톡 클론</Title>
-            <Text>HTML과 CSS를 이용하여 카카오톡을 만들었습니다. </Text>
+            <Text> HTML과 CSS를 이용하여 클론 카카오톡을 만들었습니다. </Text>
             <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
               이동하기
             </A>
@@ -189,8 +193,18 @@ function Project() {
           <Img src={Chrome} alt="thumbnail"></Img>
           <Description>
             <Title>크롬앱</Title>
-            <Text>javascript로 시계, 위치와 날씨, 투두리스트 그리고 랜덤명언 등을 만들었습니다. </Text>
+            <Text> Vanillajavascript로 시계, 위치와 날씨, 투두리스트, 랜덤 배경, 명언 등을 만들었습니다. </Text>
             <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+              이동하기
+            </A>
+          </Description>
+        </ProjectBox>
+        <ProjectBox>
+          <Img src={Paint} alt="thumbnail"></Img>
+          <Description>
+            <Title>그림판</Title>
+            <Text>javascript canvas를 이용하여 그림판을 만들었습니다. </Text>
+            <A href="https://jiiiy0510o.github.io/paintjs/" target="_blank" rel="noreferrer">
               이동하기
             </A>
           </Description>
@@ -200,7 +214,7 @@ function Project() {
           <Description>
             <Title>포트폴리오</Title>
             <Text>
-              React, Styled-Components, framer-motion, Recoil을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
+              React, Styled-Components, framer-motion, Recoil 등을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
             </Text>
             <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
               이동하기

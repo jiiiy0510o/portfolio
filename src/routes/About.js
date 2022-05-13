@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import ImgSrc from "../images/pjy.jpg";
+import { AiFillHtml5 } from "react-icons/ai";
+import { DiCss3 } from "react-icons/di";
+import { SiJavascript, SiTypescript, SiNextdotjs, SiNodedotjs } from "react-icons/si";
+import { DiJqueryLogo, DiReact, DiSass } from "react-icons/di";
 
 const Wrapper = styled.div`
   position: relative;
@@ -24,7 +28,7 @@ const SideAbout = styled.aside`
   @media screen and (max-width: 1300px) {
     width: 26vw;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
@@ -118,12 +122,12 @@ const AboutMeReflect = styled.div`
 `;
 const Text = styled.p`
   padding: 30px 120px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: ${(props) => props.theme.bgColor};
   line-height: 1.68;
   @media screen and (max-width: 1200px) {
     padding: 30 36px;
-    font-size: 1.13rem;
+    font-size: 1.18rem;
   }
   @media screen and (max-width: 660px) {
     padding: 0 38px;
@@ -141,17 +145,89 @@ const Text = styled.p`
 const Img = styled.img`
   width: 140px;
   height: 180px;
-  @media screen and (max-width: 660px) {
+  @media screen and (max-width: 1000px) {
+    width: 120px;
+    height: 146px;
+  }
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;
+const SkillTitle = styled.div`
+  letter-spacing: 3px;
+  font-size: 1.6rem;
+  color: ${(props) => props.theme.accentColor};
+  margin-top: 30px;
+`;
+const Skills = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid ${(props) => props.theme.accentColor};
 
+  margin-left: 1%;
+  padding: 30px 20px;
+  border-radius: 20px;
+  @media screen and (max-width: 1100px) {
+    padding: 20px 26px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+const Skill = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  padding: 8px;
+  color: ${(props) => props.theme.accentColor};
+`;
+const Lang = styled.span`
+  font-size: 20px;
+  padding-left: 12px;
+`;
 function About() {
   return (
     <Wrapper>
       <SideAbout>
         <AboutMe>ABOUT ME</AboutMe>
         <AboutMeReflect>ABOUT ME</AboutMeReflect>
+        <SkillTitle>Skills</SkillTitle>
+        <Skills>
+          <Skill>
+            <AiFillHtml5 />
+            <Lang>HTML</Lang>
+          </Skill>
+          <Skill>
+            <DiCss3 />
+            <Lang>CSS</Lang>
+          </Skill>
+          <Skill>
+            <DiSass />
+            <Lang>Sass</Lang>
+          </Skill>
+          <Skill>
+            <SiJavascript />
+            <Lang>Javascript</Lang>
+          </Skill>
+          <Skill>
+            <SiTypescript />
+            <Lang>Typescript</Lang>
+          </Skill>
+          <Skill>
+            <DiJqueryLogo />
+            <Lang>j-query</Lang>
+          </Skill>
+          <Skill>
+            <DiReact />
+            <Lang>React</Lang>
+          </Skill>
+          <Skill>
+            <SiNextdotjs />
+            <Lang>NextJs</Lang>
+          </Skill>
+          <Skill>
+            <SiNodedotjs />
+            <Lang>NodeJs</Lang>
+          </Skill>
+        </Skills>
       </SideAbout>
       <LineBox>
         <StoryBox>
@@ -160,7 +236,7 @@ function About() {
             안녕하세요. 도전하고 배우는게 즐거운 박지영입니다. 코딩이 배우고 싶어서 신촌 그린컴퓨터아카데미에서 퍼블리셔
             과정(Html, css, j-query)을 수료하였고 배우면서 동적인 요소, 반응형 사이트를 자연스럽게 만드는것에 관심이
             생겨 Vanilla Javascript, React 등을 공부하였습니다. 다양한 사용자의 입장에서 좀 더 편하고 접근성과 표준성을
-            준수한 웹 페이지를 그려낼 수 있도록 많이 배우고 자기개발에 힘써 좋은 코드를 만들어낼 수 있는 프론트엔드
+            준수한 웹 페이지를 그려낼 수 있도록 많이 배우고 자기계발에 힘써 좋은 코드를 만들어낼 수 있는 프론트엔드
             개발자가 될 수 있도록 노력하겠습니다. 감사합니다.
           </Text>
         </StoryBox>
