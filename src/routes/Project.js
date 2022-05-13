@@ -216,7 +216,7 @@ function Project() {
             <Text>
               React, Styled-Components, framer-motion, Recoil 등을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
             </Text>
-            <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+            <A href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
               이동하기
             </A>
           </Description>
