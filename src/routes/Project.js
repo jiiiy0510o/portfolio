@@ -101,6 +101,9 @@ const ProjectBox = styled.div`
     padding: 12px 0;
   }
 `;
+const AImg = styled.a`
+  width: 46%;
+`;
 const A = styled.a`
   padding: 16px 0;
   text-align: end;
@@ -113,8 +116,7 @@ const A = styled.a`
   }
 `;
 const Img = styled.img`
-  width: 44%;
-  height: 56%;
+  width: 100%;
   padding: 16px 0;
   @media screen and (max-width: 500px) {
     padding: 0;
@@ -167,7 +169,23 @@ function Project() {
       </SideAbout>
       <MainBox>
         <ProjectBox>
-          <Img src={Absolut} alt="thumbnail"></Img>
+          <AImg href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
+            <Img src={Port} alt="thumbnail"></Img>
+          </AImg>
+          <Description>
+            <Title>포트폴리오</Title>
+            <Text>
+              React, Styled-Components, framer-motion, Recoil 등을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
+            </Text>
+            <A href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
+              이동하기
+            </A>
+          </Description>
+        </ProjectBox>
+        <ProjectBox>
+          <AImg href="https://jiiiy0510o.github.io/Absolut/" target="_blank" rel="noreferrer">
+            <Img src={Absolut} alt="thumbnail"></Img>
+          </AImg>
           <Description>
             <Title>앱솔루트</Title>
             <Text>
@@ -180,9 +198,11 @@ function Project() {
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <Img src={KoKoa} alt="thumbnail"></Img>
+          <AImg href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
+            <Img src={KoKoa} alt="thumbnail"></Img>
+          </AImg>
           <Description>
-            <Title>카카오톡 클론</Title>
+            <Title>카카오톡 </Title>
             <Text> HTML과 CSS를 이용하여 클론 카카오톡을 만들었습니다. </Text>
             <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
               이동하기
@@ -190,7 +210,9 @@ function Project() {
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <Img src={Chrome} alt="thumbnail"></Img>
+          <AImg href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+            <Img src={Chrome} alt="thumbnail"></Img>
+          </AImg>
           <Description>
             <Title>크롬앱</Title>
             <Text> Vanillajavascript로 시계, 위치와 날씨, 투두리스트, 랜덤 배경, 명언 등을 만들었습니다. </Text>
@@ -200,7 +222,9 @@ function Project() {
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <Img src={Paint} alt="thumbnail"></Img>
+          <AImg href="https://jiiiy0510o.github.io/paintjs/" target="_blank" rel="noreferrer">
+            <Img src={Paint} alt="thumbnail"></Img>
+          </AImg>
           <Description>
             <Title>그림판</Title>
             <Text>javascript canvas를 이용하여 그림판을 만들었습니다. </Text>
@@ -210,19 +234,9 @@ function Project() {
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <Img src={Port} alt="thumbnail"></Img>
-          <Description>
-            <Title>포트폴리오</Title>
-            <Text>
-              React, Styled-Components, framer-motion, Recoil 등을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
-            </Text>
-            <A href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
-              이동하기
-            </A>
-          </Description>
-        </ProjectBox>
-        <ProjectBox>
-          <Img src={ToDo} alt="thumbnail"></Img>
+          <AImg href="https://expo.dev/@jiiiy0510o/simpletodo" target="_blank" rel="noreferrer">
+            <Img src={ToDo} alt="thumbnail"></Img>
+          </AImg>
           <Description>
             <Title>리액트 네이티브 ToDo</Title>
             <Text>Expo Go를 이용하여 ReactNative로 ToDo를 만들었고, 생성, 추가, 삭제, 저장이 가능합니다.</Text>
