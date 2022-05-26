@@ -87,6 +87,11 @@ function Header() {
         </NavLink>
       </Item>
       <Item>
+        <NavLink to="/portfolio/skills" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
+          skills
+        </NavLink>
+      </Item>
+      <Item>
         <NavLink to="/portfolio/project" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
           Project
         </NavLink>

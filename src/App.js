@@ -3,6 +3,7 @@ import Home from "./routes/Home";
 import Header from "./components/Header";
 import About from "./routes/About";
 import Project from "./routes/Project";
+import Skills from "./routes/Skills";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { blueTheme, lightTheme } from "./theme/theme";
 import { useRecoilValue } from "recoil";
@@ -56,6 +57,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/portfolio/about" element={<About />}></Route>
+            <Route path="/portfolio/skills" element={<Skills />}></Route>
             <Route path="/portfolio/project" element={<Project />}></Route>
             <Route path="/portfolio/" element={<Home />}></Route>
           </Routes>
