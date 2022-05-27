@@ -88,7 +88,7 @@ function Header() {
       </Item>
       <Item>
         <NavLink to="/portfolio/skills" style={({ isActive }) => ({ color: isActive ? "#036DF3" : null })}>
-          skills
+          Skills
         </NavLink>
       </Item>
       <Item>
