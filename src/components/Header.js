@@ -17,6 +17,9 @@ const Items = styled.ul`
   color: ${(props) => props.theme.accentColor};
   position: fixed;
   top: 0;
+  @media screen and (max-width: 500px) {
+    padding: 0 16px;
+  }
 `;
 const Item = styled.li`
   position: relative;
@@ -26,7 +29,7 @@ const Item = styled.li`
   }
   @media screen and (max-width: 500px) {
     right: 4%;
-    padding: 0 10px;
+    padding: 0 2.6%;
   }
 `;
 const Button = styled.button`
@@ -43,7 +46,7 @@ const Button = styled.button`
   }
   @media screen and (max-width: 500px) {
     margin: 0;
-    padding: 8px;
+    padding: 7px;
   }
 `;
 const Contact = styled.span`
