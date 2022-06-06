@@ -175,7 +175,9 @@ function Project() {
           <Description>
             <Title>포트폴리오</Title>
             <Text>
-              React, Styled-Components, framer-motion, Recoil 등을 이용해 반응형으로 포트폴리오 웹페이지를 만들었습니다.
+              React, Styled-Components, framer-motion, Recoil을 사용하여 포트폴리오 메인을 반응형으로 만들었습니다.
+              <br />
+              Home, About, Skills, Project, 개발블로그, 깃허브로 구성되어있습니다.
             </Text>
             <A href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
               이동하기
@@ -202,7 +204,7 @@ function Project() {
             <Img src={KoKoa} alt="thumbnail"></Img>
           </AImg>
           <Description>
-            <Title>카카오톡 </Title>
+            <Title>클론 카카오톡 </Title>
             <Text> HTML과 CSS를 이용하여 클론 카카오톡을 만들었습니다. </Text>
             <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
               이동하기
@@ -214,8 +216,11 @@ function Project() {
             <Img src={Chrome} alt="thumbnail"></Img>
           </AImg>
           <Description>
-            <Title>크롬앱</Title>
-            <Text> Vanillajavascript로 시계, 위치와 날씨, 투두리스트, 랜덤 배경, 명언 등을 만들었습니다. </Text>
+            <Title>클론 크롬앱</Title>
+            <Text>
+              Vanilla Javascript로 시계, 위치와 날씨, 투두리스트, 랜덤 배경, 명언 등을 구현한 클론 크롬앱을
+              만들었습니다.
+            </Text>
             <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
               이동하기
             </A>

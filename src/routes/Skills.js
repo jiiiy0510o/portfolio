@@ -252,15 +252,6 @@ function Skills() {
               </SkillWrap>
               <SkillWrap>
                 <Skill>
-                  <SiTypescript />
-                  <Lang>Typescript</Lang>
-                </Skill>
-                <SkillChart style={{ width: "59.2%" }}>
-                  <Per>70%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
                   <DiJqueryLogo />
                   <Lang>j-query</Lang>
                 </Skill>
@@ -268,6 +259,16 @@ function Skills() {
                   <Per>80%</Per>
                 </SkillChart>
               </SkillWrap>
+              <SkillWrap>
+                <Skill>
+                  <SiTypescript />
+                  <Lang>Typescript</Lang>
+                </Skill>
+                <SkillChart style={{ width: "51.8%" }}>
+                  <Per>70%</Per>
+                </SkillChart>
+              </SkillWrap>
+
               <SkillWrap>
                 <Skill>
                   <DiReact />
@@ -282,8 +283,8 @@ function Skills() {
                   <SiNextdotjs />
                   <Lang>NextJs</Lang>
                 </Skill>
-                <SkillChart style={{ width: "44.5%" }}>
-                  <Per>60%</Per>
+                <SkillChart style={{ width: "37%" }}>
+                  <Per>50%</Per>
                 </SkillChart>
               </SkillWrap>
               <SkillWrap>
