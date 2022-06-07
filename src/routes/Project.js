@@ -205,7 +205,11 @@ function Project() {
           </AImg>
           <Description>
             <Title>클론 카카오톡 </Title>
-            <Text> HTML과 CSS를 이용하여 클론 카카오톡을 만들었습니다. </Text>
+            <Text>
+              {" "}
+              HTML과 CSS를 이용하여 클론 카카오톡을 <br />
+              900px 이하에서 작동하는 반응형으로 만들었습니다.
+            </Text>
             <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
               이동하기
             </A>
