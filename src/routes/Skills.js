@@ -8,6 +8,8 @@ import {
   SiNodedotjs,
   SiAdobephotoshop,
   SiAdobeillustrator,
+  SiApollographql,
+  SiMysql,
 } from "react-icons/si";
 import { DiJqueryLogo, DiReact, DiSass } from "react-icons/di";
 
@@ -129,13 +131,12 @@ const AboutMeReflect = styled.div`
     display: none;
   }
 `;
-const SkillsWrap = styled.div`
+const AllSkills = styled.div`
   padding: 6px 12px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   &::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
@@ -167,9 +168,9 @@ const Skill = styled.div`
   display: flex;
   align-items: center;
   padding: 8px;
-  width: 26%;
+  width: 100%;
   font-size: 1.6rem;
-  margin: 1% 1%;
+  margin: 2% 0;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.accentColor};
   @media screen and (max-width: 1700px) {
@@ -182,6 +183,11 @@ const Skill = styled.div`
     width: 100%;
   }
 `;
+const SkillsWrap = styled.div`
+  width: 30%;
+  margin-right: 1%;
+`;
+
 const Lang = styled.span`
   font-size: 20px;
   padding-left: 12px;
@@ -197,56 +203,66 @@ function Skills() {
         <StoryBox>
           <TwoLineBox>
             <SkillTitle>Skills</SkillTitle>
-            <SkillsWrap>
-              <Skill>
-                <AiFillHtml5 />
-                <Lang>HTML</Lang>
-              </Skill>
-              <Skill>
-                <DiCss3 />
-                <Lang>CSS</Lang>
-              </Skill>
-              <Skill>
-                <DiSass />
-                <Lang>Sass</Lang>
-              </Skill>
-              <Skill>
-                <SiJavascript />
-                <Lang>Javascript</Lang>
-              </Skill>
-              <Skill>
-                <DiJqueryLogo />
-                <Lang>j-query</Lang>
-              </Skill>
-              <Skill>
-                <SiTypescript />
-                <Lang>Typescript</Lang>
-              </Skill>
-              <Skill>
-                <DiReact />
-                <Lang>React</Lang>
-              </Skill>
-              <Skill>
-                <SiNextdotjs />
-                <Lang>NextJs</Lang>
-              </Skill>
-              <Skill>
-                <SiNodedotjs />
-                <Lang>NodeJs</Lang>
-              </Skill>
-              <Skill>
-                <SiNodedotjs />
-                <Lang>GraphQL</Lang>
-              </Skill>
-              <Skill>
-                <SiAdobephotoshop />
-                <Lang>Photoshop</Lang>
-              </Skill>
-              <Skill>
-                <SiAdobeillustrator />
-                <Lang>Illustrator</Lang>
-              </Skill>
-            </SkillsWrap>
+            <AllSkills>
+              <SkillsWrap>
+                <Skill>
+                  <AiFillHtml5 />
+                  <Lang>HTML</Lang>
+                </Skill>
+                <Skill>
+                  <DiCss3 />
+                  <Lang>CSS</Lang>
+                </Skill>
+                <Skill>
+                  <DiSass />
+                  <Lang>Sass</Lang>
+                </Skill>
+                <Skill>
+                  <SiJavascript />
+                  <Lang>Javascript</Lang>
+                </Skill>
+                <Skill>
+                  <DiJqueryLogo />
+                  <Lang>j-query</Lang>
+                </Skill>
+                <Skill>
+                  <SiTypescript />
+                  <Lang>Typescript</Lang>
+                </Skill>
+                <Skill>
+                  <DiReact />
+                  <Lang>React</Lang>
+                </Skill>
+                <Skill>
+                  <SiNextdotjs />
+                  <Lang>NextJs</Lang>
+                </Skill>
+              </SkillsWrap>
+              <SkillsWrap>
+                <Skill>
+                  <SiNodedotjs />
+                  <Lang>NodeJs</Lang>
+                </Skill>
+                <Skill>
+                  <SiMysql />
+                  <Lang>MySQL</Lang>
+                </Skill>
+                <Skill>
+                  <SiApollographql />
+                  <Lang>GraphQL</Lang>
+                </Skill>
+              </SkillsWrap>
+              <SkillsWrap>
+                <Skill>
+                  <SiAdobephotoshop />
+                  <Lang>Photoshop</Lang>
+                </Skill>
+                <Skill>
+                  <SiAdobeillustrator />
+                  <Lang>Illustrator</Lang>
+                </Skill>
+              </SkillsWrap>
+            </AllSkills>
           </TwoLineBox>
         </StoryBox>
       </LineBox>
