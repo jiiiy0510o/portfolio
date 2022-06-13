@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3 } from "react-icons/di";
-import { SiJavascript, SiTypescript, SiNextdotjs, SiNodedotjs, SiAdobephotoshop } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+} from "react-icons/si";
 import { DiJqueryLogo, DiReact, DiSass } from "react-icons/di";
 
 const Wrapper = styled.div`
@@ -123,10 +130,12 @@ const AboutMeReflect = styled.div`
   }
 `;
 const SkillsWrap = styled.div`
-  padding: 12px;
+  padding: 6px 12px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   &::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
@@ -157,10 +166,10 @@ const SkillTitle = styled.div`
 const Skill = styled.div`
   display: flex;
   align-items: center;
-  font-size: 24px;
   padding: 8px;
   width: 26%;
   font-size: 1.6rem;
+  margin: 1% 1%;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.accentColor};
   @media screen and (max-width: 1700px) {
@@ -177,30 +186,6 @@ const Lang = styled.span`
   font-size: 20px;
   padding-left: 12px;
 `;
-const SkillWrap = styled.div`
-  width: 99%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #eee;
-  margin-top: 1%;
-  margin-right: 1%;
-`;
-const SkillChart = styled.div`
-  height: 60%;
-  background-color: #628db2;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  @media screen and (max-width: 700px) {
-    display: none;
-  }
-`;
-const Per = styled.span`
-  display: block;
-  text-align: end;
-  color: #f9f9f4;
-  padding: 3px 10px;
-`;
 function Skills() {
   return (
     <Wrapper>
@@ -213,98 +198,54 @@ function Skills() {
           <TwoLineBox>
             <SkillTitle>Skills</SkillTitle>
             <SkillsWrap>
-              <SkillWrap>
-                <Skill>
-                  <AiFillHtml5 />
-                  <Lang>HTML</Lang>
-                </Skill>
-                <SkillChart style={{ width: "66.6%" }}>
-                  <Per>90%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <DiCss3 />
-                  <Lang>CSS</Lang>
-                </Skill>
-                <SkillChart style={{ width: "66.6%" }}>
-                  {" "}
-                  <Per>90%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <DiSass />
-                  <Lang>Sass</Lang>
-                </Skill>
-                <SkillChart style={{ width: "59.2%" }}>
-                  <Per>90%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <SiJavascript />
-                  <Lang>Javascript</Lang>
-                </Skill>
-                <SkillChart style={{ width: "59.2%" }}>
-                  <Per>80%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <DiJqueryLogo />
-                  <Lang>j-query</Lang>
-                </Skill>
-                <SkillChart style={{ width: "59.2%" }}>
-                  <Per>80%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <SiTypescript />
-                  <Lang>Typescript</Lang>
-                </Skill>
-                <SkillChart style={{ width: "51.8%" }}>
-                  <Per>70%</Per>
-                </SkillChart>
-              </SkillWrap>
-
-              <SkillWrap>
-                <Skill>
-                  <DiReact />
-                  <Lang>React</Lang>
-                </Skill>
-                <SkillChart style={{ width: "51.8%" }}>
-                  <Per>70%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <SiNextdotjs />
-                  <Lang>NextJs</Lang>
-                </Skill>
-                <SkillChart style={{ width: "37%" }}>
-                  <Per>50%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <SiNodedotjs />
-                  <Lang>NodeJs</Lang>
-                </Skill>
-                <SkillChart style={{ width: "37%" }}>
-                  <Per>50%</Per>
-                </SkillChart>
-              </SkillWrap>
-              <SkillWrap>
-                <Skill>
-                  <SiAdobephotoshop />
-                  <Lang>Photoshop</Lang>
-                </Skill>
-                <SkillChart style={{ width: "66.6%" }}>
-                  <Per>90%</Per>
-                </SkillChart>
-              </SkillWrap>
+              <Skill>
+                <AiFillHtml5 />
+                <Lang>HTML</Lang>
+              </Skill>
+              <Skill>
+                <DiCss3 />
+                <Lang>CSS</Lang>
+              </Skill>
+              <Skill>
+                <DiSass />
+                <Lang>Sass</Lang>
+              </Skill>
+              <Skill>
+                <SiJavascript />
+                <Lang>Javascript</Lang>
+              </Skill>
+              <Skill>
+                <DiJqueryLogo />
+                <Lang>j-query</Lang>
+              </Skill>
+              <Skill>
+                <SiTypescript />
+                <Lang>Typescript</Lang>
+              </Skill>
+              <Skill>
+                <DiReact />
+                <Lang>React</Lang>
+              </Skill>
+              <Skill>
+                <SiNextdotjs />
+                <Lang>NextJs</Lang>
+              </Skill>
+              <Skill>
+                <SiNodedotjs />
+                <Lang>NodeJs</Lang>
+              </Skill>
+              <Skill>
+                <SiNodedotjs />
+                <Lang>GraphQL</Lang>
+              </Skill>
+              <Skill>
+                <SiAdobephotoshop />
+                <Lang>Photoshop</Lang>
+              </Skill>
+              <Skill>
+                <SiAdobeillustrator />
+                <Lang>Illustrator</Lang>
+              </Skill>
             </SkillsWrap>
           </TwoLineBox>
         </StoryBox>
