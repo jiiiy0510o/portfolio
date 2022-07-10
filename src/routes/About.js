@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ImgSrc from "../images/pjy.jpg";
 
 const Wrapper = styled.div`
   position: relative;
@@ -138,17 +137,6 @@ const Text = styled.p`
     font-size: 0.8rem;
   }
 `;
-const Img = styled.img`
-  width: 140px;
-  height: 180px;
-  @media screen and (max-width: 1000px) {
-    width: 120px;
-    height: 146px;
-  }
-  @media screen and (max-width: 960px) {
-    display: none;
-  }
-`;
 function About() {
   return (
     <Wrapper>
@@ -158,13 +146,14 @@ function About() {
       </SideAbout>
       <LineBox>
         <StoryBox>
-          <Img alt="증명사진" src={ImgSrc}></Img>
           <Text>
-            안녕하세요. 도전하고 배우는게 즐거운 박지영입니다. 코딩이 배우고 싶어서 신촌 그린컴퓨터아카데미에서 퍼블리셔
-            과정(Html, css, j-query)을 수료하였고 배우면서 동적인 요소, 반응형 사이트를 자연스럽게 만드는것에 관심이
-            생겨 Vanilla Javascript, React 등을 공부하였습니다. 다양한 사용자의 입장에서 좀 더 편하고 접근성과 표준성을
-            준수한 웹 페이지를 그려낼 수 있도록 많이 배우고 자기계발에 힘써 좋은 코드를 만들어낼 수 있는 프론트엔드
-            개발자가 될 수 있도록 노력하겠습니다. 감사합니다.
+            안녕하세요. 하루하루 자라나는 개발자 박지영입니다. 친구의 제안으로
+            신촌 그린컴퓨터아카데미에서 퍼블리셔 과정(Html, css, j-query)을
+            수료하였습니다. 배우면서 다양한 이벤트에 따라 움직이는 것에 관심이
+            생겨 이후 Vanilla Javascript, React 등을 공부하였습니다. 다양한
+            사용자의 입장에서 좀 더 편하고 접근성과 표준성을 준수한 웹 페이지를
+            그려낼 수 있도록 많이 고민하고 자기계발에 힘써 좋은 코드를 만들어낼
+            수 있는 프론트엔드 개발자가 될 수 있도록 노력하겠습니다. 감사합니다.
           </Text>
         </StoryBox>
         <TwoLineBox></TwoLineBox>

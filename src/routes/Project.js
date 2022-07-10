@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Absolut from "../images/absolut.png";
 import KoKoa from "../images/kokoa.png";
 import Chrome from "../images/chrome.png";
-import ToDo from "../images/todo.jpg";
 import Port from "../images/port.jpg";
 import Paint from "../images/paint.png";
+import JustOne from "../images/justone.png";
 
 const Wrapper = styled.div`
   position: relative;
@@ -147,7 +147,7 @@ const Text = styled.p`
   padding: 12px 0;
   font-size: 1.06rem;
   color: #666;
-  line-height: 1.28;
+  line-height: 1.38;
   @media screen and (max-width: 1000px) {
     padding: 0;
     margin-top: 8px;
@@ -169,88 +169,149 @@ function Project() {
       </SideAbout>
       <MainBox>
         <ProjectBox>
-          <AImg href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
+          <AImg
+            href="https://jiiiy0510o.github.io/portfolio/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Img src={Port} alt="thumbnail"></Img>
           </AImg>
           <Description>
             <Title>포트폴리오</Title>
             <Text>
-              React, Styled-Components, framer-motion, Recoil을 사용하여 포트폴리오 메인을 반응형으로 만들었습니다.
-              <br />
-              Home, About, Skills, Project, 개발블로그, 깃허브로 구성되어있습니다.
+              ○ React, Styled-Components, framer-motion, Recoil
+              <br />○ Home, About, Skills, Project, 개발블로그, 깃허브 <br />○
+              2022년 기여도 100%
+              <br /> ○ 반응형
             </Text>
-            <A href="https://jiiiy0510o.github.io/portfolio/" target="_blank" rel="noreferrer">
+            <A
+              href="https://jiiiy0510o.github.io/portfolio/"
+              target="_blank"
+              rel="noreferrer"
+            >
               이동하기
             </A>
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <AImg href="https://jiiiy0510o.github.io/Absolut/" target="_blank" rel="noreferrer">
-            <Img src={Absolut} alt="thumbnail"></Img>
+          <AImg
+            href="https://jiiiy0510o.github.io/justone-2021/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Img src={JustOne} alt="thumbnail"></Img>
           </AImg>
           <Description>
-            <Title>앱솔루트</Title>
+            <Title>저스트원 쇼핑몰</Title>
             <Text>
-              HTML, CSS, J-Query를 이용하여 중복되는 기능 부분을 제외하고 앱솔루트 홈페이지를 만들었습니다.
-              <br /> 반응형 웹사이트이고, 메인페이지 2개와 슬라이드, 메뉴탭 등을 구성하였습니다.
+              ○ HTML, CSS, J-Query
+              <br />○ 메인페이지, 서브페이지 1개(프린다 도톰 아가일 가디건){" "}
+              <br />○ 2021년 기여도 100%
+              <br /> ○ 반응형
             </Text>
-            <A href="https://jiiiy0510o.github.io/Absolut/" target="_blank" rel="noreferrer">
+            <A
+              href="https://jiiiy0510o.github.io/justone-2021/"
+              target="_blank"
+              rel="noreferrer"
+            >
               이동하기
             </A>
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <AImg href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
+          <AImg
+            href="https://jiiiy0510o.github.io/kokoa-clone-2022/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Img src={KoKoa} alt="thumbnail"></Img>
           </AImg>
           <Description>
             <Title>클론 카카오톡 </Title>
             <Text>
-              {" "}
-              HTML과 CSS를 이용하여 클론 카카오톡을 <br />
-              900px 이하에서 작동하는 반응형으로 만들었습니다.
+              ○ HTML, CSS <br />○ 2022년 기여도 100%
+              <br /> ○ 900px이하 반응형
             </Text>
-            <A href="https://jiiiy0510o.github.io/kokoa-clone-2022/" target="_blank" rel="noreferrer">
+            <A
+              href="https://jiiiy0510o.github.io/kokoa-clone-2022/"
+              target="_blank"
+              rel="noreferrer"
+            >
               이동하기
             </A>
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <AImg href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+          <AImg
+            href="https://jiiiy0510o.github.io/Absolut/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Img src={Absolut} alt="thumbnail"></Img>
+          </AImg>
+          <Description>
+            <Title>앱솔루트</Title>
+            <Text>
+              ○ HTML, CSS, J-Query
+              <br />○ 메인페이지, 서브페이지 2개, 메뉴탭 등 <br />○ 2022년
+              기여도 100%
+              <br /> ○ 반응형
+            </Text>
+            <A
+              href="https://jiiiy0510o.github.io/Absolut/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              이동하기
+            </A>
+          </Description>
+        </ProjectBox>
+
+        <ProjectBox>
+          <AImg
+            href="https://jiiiy0510o.github.io/chrome-2022/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Img src={Chrome} alt="thumbnail"></Img>
           </AImg>
           <Description>
             <Title>클론 크롬앱</Title>
             <Text>
-              Vanilla Javascript로 시계, 위치와 날씨, 투두리스트, 랜덤 배경, 명언 등을 구현한 클론 크롬앱을
-              만들었습니다.
+              ○ HTML, CSS, Javascript
+              <br />○ 시계, 위치와 날씨, 투두리스트, 랜덤 배경, 랜덤 명언
+              <br />○ 2022년 기여도 100%
+              <br /> ○ 반응형
             </Text>
-            <A href="https://jiiiy0510o.github.io/chrome-2022/" target="_blank" rel="noreferrer">
+            <A
+              href="https://jiiiy0510o.github.io/chrome-2022/"
+              target="_blank"
+              rel="noreferrer"
+            >
               이동하기
             </A>
           </Description>
         </ProjectBox>
         <ProjectBox>
-          <AImg href="https://jiiiy0510o.github.io/paintjs/" target="_blank" rel="noreferrer">
+          <AImg
+            href="https://jiiiy0510o.github.io/paintjs/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Img src={Paint} alt="thumbnail"></Img>
           </AImg>
           <Description>
             <Title>그림판</Title>
-            <Text>javascript canvas를 이용하여 그림판을 만들었습니다. </Text>
-            <A href="https://jiiiy0510o.github.io/paintjs/" target="_blank" rel="noreferrer">
+            <Text>
+              ○ HTML, CSS, Canvas, Javascript
+              <br />○ 2022년 기여도 100%
+            </Text>
+            <A
+              href="https://jiiiy0510o.github.io/paintjs/"
+              target="_blank"
+              rel="noreferrer"
+            >
               이동하기
-            </A>
-          </Description>
-        </ProjectBox>
-        <ProjectBox>
-          <AImg href="https://expo.dev/@jiiiy0510o/simpletodo" target="_blank" rel="noreferrer">
-            <Img src={ToDo} alt="thumbnail"></Img>
-          </AImg>
-          <Description>
-            <Title>리액트 네이티브 ToDo</Title>
-            <Text>Expo Go를 이용하여 ReactNative로 ToDo를 만들었고, 생성, 추가, 삭제, 저장이 가능합니다.</Text>
-            <A href="https://expo.dev/@jiiiy0510o/simpletodo" target="_blank" rel="noreferrer">
-              QR코드로 이동하기
             </A>
           </Description>
         </ProjectBox>

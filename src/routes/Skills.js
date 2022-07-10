@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiFillHtml5 } from "react-icons/ai";
+import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { DiCss3 } from "react-icons/di";
 import {
   SiJavascript,
@@ -132,11 +132,8 @@ const AboutMeReflect = styled.div`
   }
 `;
 const AllSkills = styled.div`
-  padding: 6px 12px;
+  padding-top: 20px;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   &::-webkit-scrollbar {
     width: 12px;
     background-color: transparent;
@@ -151,11 +148,9 @@ const AllSkills = styled.div`
     height: 280px;
     overflow-y: scroll;
     width: 80%;
-    grid-template-columns: repeat(1, 1fr);
   }
   @media screen and (max-width: 1200px) {
     width: 78%;
-    grid-template-columns: repeat(1, 1fr);
   }
 `;
 const SkillTitle = styled.div`
@@ -163,34 +158,51 @@ const SkillTitle = styled.div`
   font-size: 2rem;
   color: ${(props) => props.theme.bgColor};
   margin-bottom: 3%;
+  @media screen and (max-width: 1000px) {
+    padding-top: 3%;
+    margin-bottom: 1%;
+  }
 `;
 const Skill = styled.div`
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 3px 8px;
   width: 100%;
   font-size: 1.6rem;
-  margin: 2% 0;
+  margin: 6px 2px;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.accentColor};
-  @media screen and (max-width: 1700px) {
-    width: 30%;
-  }
-  @media screen and (max-width: 1200px) {
-    width: 34%;
-  }
-  @media screen and (max-width: 700px) {
-    width: 100%;
+  @media screen and (max-width: 1500px) {
+    padding: 6px 8px;
+    width: 80%;
+    border-radius: 6px;
   }
 `;
 const SkillsWrap = styled.div`
-  width: 30%;
-  margin-right: 1%;
+  width: 100%;
+  display: flex;
+  margin-bottom: 6px;
+  @media screen and (max-width: 1500px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `;
-
+const Step = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.theme.bgColor};
+  @media screen and (max-width: 1500px) {
+    justify-content: center;
+    text-align: center;
+    margin: 2% 0;
+    font-weight: 900;
+  }
+`;
 const Lang = styled.span`
   font-size: 20px;
-  padding-left: 12px;
+  padding-left: 10px;
 `;
 function Skills() {
   return (
@@ -204,6 +216,7 @@ function Skills() {
           <TwoLineBox>
             <SkillTitle>Skills</SkillTitle>
             <AllSkills>
+              <Step>Strong</Step>
               <SkillsWrap>
                 <Skill>
                   <AiFillHtml5 />
@@ -226,19 +239,20 @@ function Skills() {
                   <Lang>j-query</Lang>
                 </Skill>
                 <Skill>
-                  <SiTypescript />
-                  <Lang>Typescript</Lang>
-                </Skill>
-                <Skill>
                   <DiReact />
                   <Lang>React</Lang>
+                </Skill>
+              </SkillsWrap>
+              <Step>Experience</Step>
+              <SkillsWrap>
+                <Skill>
+                  <SiTypescript />
+                  <Lang>Typescript</Lang>
                 </Skill>
                 <Skill>
                   <SiNextdotjs />
                   <Lang>NextJs</Lang>
                 </Skill>
-              </SkillsWrap>
-              <SkillsWrap>
                 <Skill>
                   <SiNodedotjs />
                   <Lang>NodeJs</Lang>
@@ -252,6 +266,7 @@ function Skills() {
                   <Lang>GraphQL</Lang>
                 </Skill>
               </SkillsWrap>
+              <Step>ETC</Step>
               <SkillsWrap>
                 <Skill>
                   <SiAdobephotoshop />
@@ -260,6 +275,10 @@ function Skills() {
                 <Skill>
                   <SiAdobeillustrator />
                   <Lang>Illustrator</Lang>
+                </Skill>
+                <Skill>
+                  <AiFillGithub />
+                  <Lang>Git</Lang>
                 </Skill>
               </SkillsWrap>
             </AllSkills>
